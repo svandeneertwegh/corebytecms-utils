@@ -8,7 +8,6 @@ try:
     from .models import Post
     from .settings import get_setting
 
-
     class PostIndex(get_index_base()):
         haystack_use_for_indexing = get_setting("ENABLE_SEARCH")
 

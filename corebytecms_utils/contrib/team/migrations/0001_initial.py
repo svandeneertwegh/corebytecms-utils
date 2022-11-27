@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                                         primary_key=True, serialize=False,
                                         verbose_name='ID')),
                 (
-                'name', models.CharField(max_length=255, verbose_name='Naam')),
+                    'name', models.CharField(max_length=255, verbose_name='Naam')),
                 ('function', models.CharField(
                     max_length=255, verbose_name='Functie')),
                 ('description', models.TextField(verbose_name='Omschrijving')),
