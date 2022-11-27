@@ -11,7 +11,8 @@ class SiteConfiguration(SingletonModel):
 
     social_facebook = models.URLField(verbose_name=_('Facebook address'),
                                       blank=True)
-    social_twitter = models.URLField(verbose_name=_('Twitter address'), blank=True)
+    social_twitter = models.URLField(
+        verbose_name=_('Twitter address'), blank=True)
     social_linkedin = models.URLField(verbose_name=_('LinkedIn adsreas'),
                                       blank=True)
 
@@ -25,4 +26,3 @@ class SiteConfiguration(SingletonModel):
 
     class Meta:
         verbose_name = _('Site configuration')
-

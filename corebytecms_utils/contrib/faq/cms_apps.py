@@ -15,4 +15,3 @@ class FAQAppHook(CMSApp):
 
 
 apphook_pool.register(FAQAppHook)
-

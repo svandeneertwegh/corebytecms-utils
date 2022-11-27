@@ -10,8 +10,8 @@ class TeamEmployee(models.Model):
     description = models.TextField(verbose_name=_('Description'))
 
     picture = FilerImageField(verbose_name=_('Picture'), null=True, blank=True,
-                            related_name='team_picture',
-                            on_delete=models.CASCADE)
+                              related_name='team_picture',
+                              on_delete=models.CASCADE)
 
     linkedin = models.URLField(blank=True, verbose_name=_('LinkedIn page'))
     twitter = models.URLField(blank=True, verbose_name=_('Twitter page'))
