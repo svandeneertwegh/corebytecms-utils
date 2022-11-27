@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -15,18 +14,23 @@ class Migration(migrations.Migration):
             name='TeamEmployee',
             fields=[
                 ('id', models.AutoField(auto_created=True,
-                 primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255, verbose_name='Naam')),
+                                        primary_key=True, serialize=False,
+                                        verbose_name='ID')),
+                (
+                'name', models.CharField(max_length=255, verbose_name='Naam')),
                 ('function', models.CharField(
                     max_length=255, verbose_name='Functie')),
                 ('description', models.TextField(verbose_name='Omschrijving')),
                 ('image', models.ImageField(blank=True,
-                 upload_to='', verbose_name='Afbeelding')),
+                                            upload_to='',
+                                            verbose_name='Afbeelding')),
                 ('linkedin', models.URLField(
                     blank=True, verbose_name='LinkedIn pagina')),
-                ('twitter', models.URLField(blank=True, verbose_name='Twitter pagina')),
+                ('twitter',
+                 models.URLField(blank=True, verbose_name='Twitter pagina')),
                 ('email', models.EmailField(blank=True,
-                 max_length=254, verbose_name='Email adres')),
+                                            max_length=254,
+                                            verbose_name='Email adres')),
             ],
             options={
                 'verbose_name': 'Medewerker',

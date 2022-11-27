@@ -1,6 +1,5 @@
 from cms.app_base import CMSApp
 from cms.apphook_pool import apphook_pool
-from django.conf import settings
 from django.utils.translation import gettext as _
 
 

@@ -16,7 +16,8 @@ class SiteConfiguration(SingletonModel):
     social_linkedin = models.URLField(verbose_name=_('LinkedIn adsreas'),
                                       blank=True)
 
-    mail_address = models.EmailField(verbose_name=_('Email address'), null=True,
+    mail_address = models.EmailField(verbose_name=_('Email address'),
+                                     null=True,
                                      blank=True, max_length=255)
     phone = models.CharField(verbose_name=_('Phone number'), null=True,
                              blank=True, max_length=255)

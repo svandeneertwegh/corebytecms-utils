@@ -6,7 +6,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -25,7 +24,8 @@ class Migration(migrations.Migration):
                                       related_name='calltoaction_calltoaction',
                                       serialize=False,
                                       to='cms.cmsplugin')),
-                ('title', models.CharField(max_length=255, verbose_name='Title')),
+                ('title',
+                 models.CharField(max_length=255, verbose_name='Title')),
                 ('subtitle', models.CharField(
                     max_length=255, verbose_name='Subtitle')),
                 ('link_name', models.CharField(

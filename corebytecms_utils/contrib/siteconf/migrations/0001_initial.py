@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -15,11 +14,14 @@ class Migration(migrations.Migration):
             name='SiteConfiguration',
             fields=[
                 ('id', models.AutoField(auto_created=True,
-                 primary_key=True, serialize=False, verbose_name='ID')),
+                                        primary_key=True, serialize=False,
+                                        verbose_name='ID')),
                 ('site_title', models.CharField(blank=True,
-                 max_length=255, verbose_name='Site title')),
+                                                max_length=255,
+                                                verbose_name='Site title')),
                 ('site_author', models.CharField(blank=True,
-                 max_length=255, null=True, verbose_name='Author')),
+                                                 max_length=255, null=True,
+                                                 verbose_name='Author')),
                 ('social_facebook', models.URLField(
                     blank=True, verbose_name='Facebook address')),
                 ('social_twitter', models.URLField(
@@ -27,9 +29,11 @@ class Migration(migrations.Migration):
                 ('social_linkedin', models.URLField(
                     blank=True, verbose_name='LinkedIn adsreas')),
                 ('mail_address', models.EmailField(blank=True,
-                 max_length=255, null=True, verbose_name='Email address')),
+                                                   max_length=255, null=True,
+                                                   verbose_name='Email address')),
                 ('phone', models.CharField(blank=True, max_length=255,
-                 null=True, verbose_name='Phone number')),
+                                           null=True,
+                                           verbose_name='Phone number')),
             ],
             options={
                 'verbose_name': 'Site configuration',

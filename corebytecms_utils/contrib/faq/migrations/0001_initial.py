@@ -5,7 +5,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -24,7 +23,8 @@ class Migration(migrations.Migration):
                                       related_name='faq_faq',
                                       serialize=False,
                                       to='cms.cmsplugin')),
-                ('question', models.CharField(max_length=255, verbose_name='Vraag')),
+                ('question',
+                 models.CharField(max_length=255, verbose_name='Vraag')),
                 ('answer', models.TextField(verbose_name='Answer')),
             ],
             options={
