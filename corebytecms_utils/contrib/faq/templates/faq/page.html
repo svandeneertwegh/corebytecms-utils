@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col">
+                <h2 class="font-weight-normal text-7 mb-2">{% blocktrans %}Frequently Asked <strong class="font-weight-extra-bold">Questions</strong>{% endblocktrans %}
+                </h2>
+                <hr class="solid">
+
+                <div class="toggle toggle-primary m-0" data-plugin-toggle>
+                    {% for obj in object_list %}
+                        <section class="toggle">
+                            <a class="toggle-title">{{ obj.question }}</a>
+                            <div class="toggle-content">
+                                <p>{{ obj.answer }}</p>
+                            </div>
+                        </section>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+<section
+        class="call-to-action {% if obj.featured %}featured featured{% else %}call-to-action{% endif %}-{{ obj.style }} {% if obj.borders %}with-borders{% endif %} mb-5{% if obj.animated %} appear-animation{% endif %}"
+        {% if obj.animated %} data-appear-animation="fadeIn"{% endif %}>
+    <div class="col-sm-9 col-lg-9">
+        <div class="call-to-action-content">
+            <h3>{{ obj.title|safe }}</h3>
+            <p class="mb-0">{{ obj.subtitle|safe }}</p>
+        </div>
+    </div>
+    <div class="col-sm-3 col-lg-3">
+        <div class="call-to-action-btn">
+            <a href="{{ obj.link_page.get_absolute_url }}" target="_blank"
+               class="btn btn-modern text-2 btn-light">{{ obj.link_name }}</a>
+        </div>
+    </div>
+</section>

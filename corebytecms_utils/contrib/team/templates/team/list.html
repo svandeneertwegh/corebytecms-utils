@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block page_title %}
+    <h1 class="font-weight-bold text-light">Ons team</h1>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{% trans "Our employees" %}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sort-destination-loader pt-2 sort-destination-loader-loaded">
+            <div class="row team-list sort-destination" data-sort-id="team" data-filter="*">
+                {% for employee in object_list %}
+                    <div class="col-12 col-sm-6 col-lg-3 isotope-item">
+                        <span class="thumb-info thumb-info-hide-wrapper-bg mb-4">
+                            <span class="thumb-info-wrapper">
+                                <a href="#">
+                                    <img src="{{ employee.picture.url }}" class="img-fluid" alt="">
+                                    <span class="thumb-info-title">
+                                        <span class="thumb-info-inner">{{ employee.full_name }}</span>
+                                        <span class="thumb-info-type">{{ employee.function }}</span>
+                                    </span>
+                                </a>
+                            </span>
+                            <span class="thumb-info-caption">
+                                {% if employee.description %}
+                                    <span class="thumb-info-caption-text">{{ employee.description }}</span>{% endif %}
+                                <span class="thumb-info-social-icons mb-4">
+                                    {% if employee.email %}<a href="mailto:{{ employee.email }}"><i
+                                        class="fas fa-envelope"></i><span>Email</span></a>{% endif %}
+
+                                    {% if employee.linkedin %}<a href="{{ employee.linkedin }}"><i
+                                        class="fab fa-linkedin-in"></i><span>Linkedin</span></a>{% endif %}
+                                    {% if employee.twitter %}<a href="{{ employee.twitter }}"><i
+                                        class="fab fa-twitter"></i><span>Twitter</span></a>{% endif %}
+                                </span>
+                            </span>
+                        </span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
